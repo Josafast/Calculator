@@ -6,16 +6,18 @@
 
 .d-none {display: none !important;}
 
-body {
+.body {
+	position: fixed;
 	flex-flow: column;
 	background-color: #f9f9f9;
+	width: 100%;
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items:center
 }
 
-body.dark-mode {background-color: #333;}
+.body.dark-mode {background-color: #333;}
 
 .calculator {
 	z-index: 1;
@@ -28,7 +30,7 @@ body.dark-mode {background-color: #333;}
 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
 }
 
-body.dark-mode .calculator {
+.body.dark-mode .calculator {
 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);	
 }
 
@@ -38,8 +40,6 @@ body.dark-mode .calculator {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-	width: 320px !important;
-	height: 40px !important;
 	background-color: #666;
 	color: #fff;
 }
@@ -50,11 +50,11 @@ body.dark-mode .calculator {
 	height: 25px;
 }
 
-.darkMode img[src="images/svg/sunny.svg"]{display: none;}
+.darkMode img.sunny{display: none;}
 
-body.dark-mode .darkMode img[src="images/svg/sunny.svg"]{display: inline-block;}
+.body.dark-mode .darkMode img.sunny{display: inline-block;}
 
-body.dark-mode .darkMode img[src="images/svg/moon.svg"]{display: none;}
+.body.dark-mode .darkMode img.moon{display: none;}
 
 .text {
 	cursor: default;
@@ -66,7 +66,7 @@ body.dark-mode .darkMode img[src="images/svg/moon.svg"]{display: none;}
 	user-select:none;
 }
 
-body.dark-mode .calculator .text {
+.body.dark-mode .calculator .text {
 	background-color: #999;
 	color: #fff;
 }
@@ -87,18 +87,18 @@ body.dark-mode .calculator .text {
 
 .buttons img {filter: invert(45%);}
 
-body.dark-mode .calculator .buttons {
+.body.dark-mode .calculator .buttons {
 	background-color: #444;
 	color: #fff;
 }
 
 .buttons:hover {background-color: lightgrey;}
 
-body.dark-mode .calculator .buttons:hover {background-color: #333;}
+.body.dark-mode .calculator .buttons:hover {background-color: #333;}
 
 .buttons:active {background-color: grey; }
 
-body.dark-mode .calculator .buttons:active {background-color: #222;}
+.body.dark-mode .calculator .buttons:active {background-color: #222;}
 
 .buttons:nth-child(24) {grid-column: 3 / span 2;}
 
@@ -107,9 +107,9 @@ body.dark-mode .calculator .buttons:active {background-color: #222;}
 	height: 50px;
 }
 
-body.dark-mode img {filter: invert(100%);}
+.body.dark-mode img {filter: invert(100%);}
 
-body .about {
+.body .about {
 	padding: 20px;
 	justify-content: center;
 	top: 0;
@@ -120,17 +120,17 @@ body .about {
 	height: 100%;
 }
 
-body .about p {
+.body .about p {
 	text-align: center;
 	color: #666;
 	font-size: .8em;
 }
 
-body.dark-mode .about p {
+.body.dark-mode .about p {
 	color: #fff;
 }
 
-body .about a[href="https://github.com/Josafast"] img{
+.body .about a[href="https://github.com/Josafast"] img{
 	position: fixed;
 	bottom: 15px;
 	left: 15px;
@@ -139,7 +139,7 @@ body .about a[href="https://github.com/Josafast"] img{
 	filter: invert(50%);
 }
 
-body .about a[href="https://github.com/Josafast/Calculator"] img{
+.body .about a[href="https://github.com/Josafast/Calculator"] img{
 	position: fixed;
 	bottom: 15px;
 	right: 20px;
@@ -148,26 +148,26 @@ body .about a[href="https://github.com/Josafast/Calculator"] img{
 	filter: invert(50%);
 }
 
-body.dark-mode .about a[href="https://github.com/Josafast"] img {filter: invert(100%);}
+.body.dark-mode .about a[href="https://github.com/Josafast"] img {filter: invert(100%);}
 
-body.dark-mode .about a[href="https://github.com/Josafast/Calculator"] img {filter: invert(70%);}
+.body.dark-mode .about a[href="https://github.com/Josafast/Calculator"] img {filter: invert(70%);}
 
-body.dark-mode .about a[href="https://github.com/Josafast/Calculator"]:hover img {filter: invert(100%);}
+.body.dark-mode .about a[href="https://github.com/Josafast/Calculator"]:hover img {filter: invert(100%);}
 
-body .about a[href="https://github.com/Josafast/Calculator"]:hover img {filter: invert(30%);}
+.body .about a[href="https://github.com/Josafast/Calculator"]:hover img {filter: invert(30%);}
 
-body .about-button {display: none;}
+.body .about-button {display: none;}
 
 @media (max-width: 460px){
-	body .about-button img[src="images/svg/close.svg"]{display: none;}
+	.body .about-button img.close{display: none;}
 
-	body .about.showed ~ .about-button{z-index: 4;} 
+	.body .about.showed ~ .about-button{z-index: 4;} 
 
-	body .about.showed ~ .about-button > img[src="images/svg/help-outline.svg"]{display: none;}
+	.body .about.showed ~ .about-button > img.help{display: none;}
 
-	body .about.showed ~ .about-button > img[src="images/svg/close.svg"]{display: inline-block;}
+	.body .about.showed ~ .about-button > img.close{display: inline-block;}
 
-	body .about-button {
+	.body .about-button {
 		cursor: pointer;
 		display: flex;
 		justify-content: center;
@@ -179,7 +179,7 @@ body .about-button {display: none;}
 		z-index: 2;
 	}
 
-	body .about.showed {
+	.body .about.showed {
 		gap: 5px;
 		align-items: center;
 		flex-flow: column;
@@ -187,9 +187,9 @@ body .about-button {display: none;}
 		background-color: rgba(255, 255, 255, 0.8);
 	}
 
-	body.dark-mode .about.showed {background-color: rgba(68, 68, 68, 0.8);}
+	.body.dark-mode .about.showed {background-color: rgba(68, 68, 68, 0.8);}
 
-	body .about a[href="https://github.com/Josafast"] img{
+	.body .about a[href="https://github.com/Josafast"] img{
 		order: 1;
 		position: relative;
 		bottom: auto;
@@ -198,22 +198,24 @@ body .about-button {display: none;}
 		height: 60px;
 	}
 
-	body .about a[href="https://github.com/Josafast/Calculator"] img{
+	.body .about a[href="https://github.com/Josafast/Calculator"] img{
 		right: 0;
 		left: 20px;
 	}
 
-	body .about p {order: 2;}
+	.body .about p {order: 2;}
 
-	body.dark-mode .about-button img {filter: invert(100%);}
+	.body.dark-mode .about-button img {filter: invert(100%);}
 
-	body .about-button img {
+	.body .about-button img {
 		filter: invert(45%);
 		width: 35px;
 		height: 35px;
 	}
 
 	.calculator {
+		top: 0;
+		left: 0;
 		position: fixed;
 		width: 100%;
 		height: 100%;
@@ -237,5 +239,5 @@ body .about-button {display: none;}
 		height: 35px;
 	}
 
-	body.dark-mode .darkMode {color: #fff;}
+	.body.dark-mode .darkMode {color: #fff;}
 }
